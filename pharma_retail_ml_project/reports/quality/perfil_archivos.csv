@@ -1,0 +1,7 @@
+﻿file,rows,columns,null_cells,columns_with_nulls,duplicate_full_rows,memory_mb
+products_catalog.csv,62,11,60,1,0,0.04
+pharma_retail_sales.csv,575028,10,0,0,0,269.751
+pharma_monthly_sales.csv,5828,18,0,0,0,2.636
+calibration_parameters.csv,496,8,920,2,0,0.209
+data_quality_report.csv,94,4,0,0,0,0.025
+calibration_overrides_template.csv,0,7,0,0,0,0.0
