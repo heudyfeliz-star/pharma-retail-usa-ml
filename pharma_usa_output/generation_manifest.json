@@ -1,0 +1,633 @@
+{
+  "dataset_name": "US synthetic retail pharmaceutical sample 2019-2026",
+  "generator_version": "1.0.0",
+  "period_start": "2019-01-01",
+  "period_end": "2026-10-19",
+  "number_of_months": 94,
+  "total_products": 62,
+  "product_groups": {
+    "OTC": 30,
+    "RX": 30,
+    "CONTROLLED": 2
+  },
+  "base_units_per_product_month": 5850,
+  "base_records_per_month": 6200,
+  "monthly_variation_pct": 0.12,
+  "synthetic_monthly_product_noise_sd": 0.06,
+  "seed": 42,
+  "override_rows": 0,
+  "total_sample_rows": 575028,
+  "total_synthetic_modeled_units": 33639168,
+  "unit_definition": "Abstract commercial product unit; not tablets, doses, patients or dollars",
+  "row_definition": "One synthetic, stratified product-month sample event, not a verified US retail sale",
+  "modeled_units_contribution_definition": "Monthly modeled product units divided by that product-month's number of sample events",
+  "sample_design": "Stratified synthetic convenience sample; >=1 observation per product and month",
+  "national_representativeness": false,
+  "market_estimate": false,
+  "yearly_proxies_are_assigned_uniformly_to_months": true,
+  "pandemic_dates_are_descriptive_not_causal": true,
+  "prescription_dispensing_does_not_prove_ingestion": true,
+  "october_2026_partial_period": true,
+  "dates_are_month_only_no_fake_transaction_day": true,
+  "regulatory_status": "Catalog preselection; individual product/NDC mapping not yet verified",
+  "categories": {
+    "OTC": "nonprescription",
+    "RX": "prescription, nonopioid-controlled subgroup",
+    "CONTROLLED": "prescription opioid, DEA Schedule II"
+  },
+  "limitations": [
+    "5850 is a synthetic model reference for each product, not an observed national market count",
+    "Equal baseline product reference volumes are an artificial design choice, not actual relative market shares",
+    "Category annual trends are category proxies, not evidence of product-specific sales or monthly effects",
+    "Other products have neutral multiplier 1, with explicitly synthetic monthly noise",
+    "2025-2026 opioid trend carried forward from 2024 solely as a documented assumption",
+    "Individual product approval/marketing dates and NDCs have not been independently validated in this script",
+    "Cannot infer COVID-19 causal effects from these synthetic data"
+  ],
+  "sources": {
+    "opioid_category": "https://www.cdc.gov/overdose-prevention/data-research/facts-stats/us-dispensing-rate-maps.html",
+    "antibiotic_category": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11526179/",
+    "cms_optional_background": "https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug",
+    "fda_product_reconciliation": "https://open.fda.gov/apis/drug/ndc/"
+  },
+  "monthly_summary": [
+    {
+      "month": "2019-01",
+      "sample_rows": 6322,
+      "modeled_units": 361535,
+      "partial": false
+    },
+    {
+      "month": "2019-02",
+      "sample_rows": 6538,
+      "modeled_units": 364481,
+      "partial": false
+    },
+    {
+      "month": "2019-03",
+      "sample_rows": 6360,
+      "modeled_units": 361254,
+      "partial": false
+    },
+    {
+      "month": "2019-04",
+      "sample_rows": 5928,
+      "modeled_units": 363096,
+      "partial": false
+    },
+    {
+      "month": "2019-05",
+      "sample_rows": 6112,
+      "modeled_units": 366579,
+      "partial": false
+    },
+    {
+      "month": "2019-06",
+      "sample_rows": 6739,
+      "modeled_units": 361108,
+      "partial": false
+    },
+    {
+      "month": "2019-07",
+      "sample_rows": 6207,
+      "modeled_units": 359942,
+      "partial": false
+    },
+    {
+      "month": "2019-08",
+      "sample_rows": 5989,
+      "modeled_units": 360836,
+      "partial": false
+    },
+    {
+      "month": "2019-09",
+      "sample_rows": 6004,
+      "modeled_units": 364443,
+      "partial": false
+    },
+    {
+      "month": "2019-10",
+      "sample_rows": 5894,
+      "modeled_units": 363959,
+      "partial": false
+    },
+    {
+      "month": "2019-11",
+      "sample_rows": 6001,
+      "modeled_units": 367122,
+      "partial": false
+    },
+    {
+      "month": "2019-12",
+      "sample_rows": 6665,
+      "modeled_units": 361672,
+      "partial": false
+    },
+    {
+      "month": "2020-01",
+      "sample_rows": 6169,
+      "modeled_units": 355435,
+      "partial": false
+    },
+    {
+      "month": "2020-02",
+      "sample_rows": 6666,
+      "modeled_units": 350256,
+      "partial": false
+    },
+    {
+      "month": "2020-03",
+      "sample_rows": 5557,
+      "modeled_units": 358202,
+      "partial": false
+    },
+    {
+      "month": "2020-04",
+      "sample_rows": 6147,
+      "modeled_units": 354036,
+      "partial": false
+    },
+    {
+      "month": "2020-05",
+      "sample_rows": 6606,
+      "modeled_units": 354074,
+      "partial": false
+    },
+    {
+      "month": "2020-06",
+      "sample_rows": 5482,
+      "modeled_units": 357475,
+      "partial": false
+    },
+    {
+      "month": "2020-07",
+      "sample_rows": 5457,
+      "modeled_units": 355106,
+      "partial": false
+    },
+    {
+      "month": "2020-08",
+      "sample_rows": 6759,
+      "modeled_units": 353905,
+      "partial": false
+    },
+    {
+      "month": "2020-09",
+      "sample_rows": 6001,
+      "modeled_units": 353997,
+      "partial": false
+    },
+    {
+      "month": "2020-10",
+      "sample_rows": 6627,
+      "modeled_units": 355877,
+      "partial": false
+    },
+    {
+      "month": "2020-11",
+      "sample_rows": 5811,
+      "modeled_units": 361354,
+      "partial": false
+    },
+    {
+      "month": "2020-12",
+      "sample_rows": 5966,
+      "modeled_units": 354123,
+      "partial": false
+    },
+    {
+      "month": "2021-01",
+      "sample_rows": 6654,
+      "modeled_units": 355556,
+      "partial": false
+    },
+    {
+      "month": "2021-02",
+      "sample_rows": 6580,
+      "modeled_units": 357403,
+      "partial": false
+    },
+    {
+      "month": "2021-03",
+      "sample_rows": 5621,
+      "modeled_units": 356278,
+      "partial": false
+    },
+    {
+      "month": "2021-04",
+      "sample_rows": 5957,
+      "modeled_units": 353633,
+      "partial": false
+    },
+    {
+      "month": "2021-05",
+      "sample_rows": 5821,
+      "modeled_units": 358268,
+      "partial": false
+    },
+    {
+      "month": "2021-06",
+      "sample_rows": 5714,
+      "modeled_units": 355704,
+      "partial": false
+    },
+    {
+      "month": "2021-07",
+      "sample_rows": 6802,
+      "modeled_units": 356916,
+      "partial": false
+    },
+    {
+      "month": "2021-08",
+      "sample_rows": 5974,
+      "modeled_units": 356033,
+      "partial": false
+    },
+    {
+      "month": "2021-09",
+      "sample_rows": 6716,
+      "modeled_units": 353240,
+      "partial": false
+    },
+    {
+      "month": "2021-10",
+      "sample_rows": 5637,
+      "modeled_units": 362867,
+      "partial": false
+    },
+    {
+      "month": "2021-11",
+      "sample_rows": 6154,
+      "modeled_units": 354704,
+      "partial": false
+    },
+    {
+      "month": "2021-12",
+      "sample_rows": 6907,
+      "modeled_units": 356283,
+      "partial": false
+    },
+    {
+      "month": "2022-01",
+      "sample_rows": 6095,
+      "modeled_units": 366400,
+      "partial": false
+    },
+    {
+      "month": "2022-02",
+      "sample_rows": 5877,
+      "modeled_units": 359431,
+      "partial": false
+    },
+    {
+      "month": "2022-03",
+      "sample_rows": 6170,
+      "modeled_units": 362368,
+      "partial": false
+    },
+    {
+      "month": "2022-04",
+      "sample_rows": 5676,
+      "modeled_units": 358821,
+      "partial": false
+    },
+    {
+      "month": "2022-05",
+      "sample_rows": 6755,
+      "modeled_units": 362160,
+      "partial": false
+    },
+    {
+      "month": "2022-06",
+      "sample_rows": 5921,
+      "modeled_units": 360008,
+      "partial": false
+    },
+    {
+      "month": "2022-07",
+      "sample_rows": 5616,
+      "modeled_units": 356308,
+      "partial": false
+    },
+    {
+      "month": "2022-08",
+      "sample_rows": 5743,
+      "modeled_units": 362591,
+      "partial": false
+    },
+    {
+      "month": "2022-09",
+      "sample_rows": 6098,
+      "modeled_units": 354783,
+      "partial": false
+    },
+    {
+      "month": "2022-10",
+      "sample_rows": 6822,
+      "modeled_units": 361368,
+      "partial": false
+    },
+    {
+      "month": "2022-11",
+      "sample_rows": 5968,
+      "modeled_units": 361650,
+      "partial": false
+    },
+    {
+      "month": "2022-12",
+      "sample_rows": 6232,
+      "modeled_units": 357968,
+      "partial": false
+    },
+    {
+      "month": "2023-01",
+      "sample_rows": 5862,
+      "modeled_units": 358199,
+      "partial": false
+    },
+    {
+      "month": "2023-02",
+      "sample_rows": 6374,
+      "modeled_units": 362405,
+      "partial": false
+    },
+    {
+      "month": "2023-03",
+      "sample_rows": 5633,
+      "modeled_units": 358657,
+      "partial": false
+    },
+    {
+      "month": "2023-04",
+      "sample_rows": 6421,
+      "modeled_units": 363047,
+      "partial": false
+    },
+    {
+      "month": "2023-05",
+      "sample_rows": 6003,
+      "modeled_units": 364240,
+      "partial": false
+    },
+    {
+      "month": "2023-06",
+      "sample_rows": 5697,
+      "modeled_units": 360044,
+      "partial": false
+    },
+    {
+      "month": "2023-07",
+      "sample_rows": 6554,
+      "modeled_units": 358381,
+      "partial": false
+    },
+    {
+      "month": "2023-08",
+      "sample_rows": 6179,
+      "modeled_units": 361574,
+      "partial": false
+    },
+    {
+      "month": "2023-09",
+      "sample_rows": 6096,
+      "modeled_units": 362786,
+      "partial": false
+    },
+    {
+      "month": "2023-10",
+      "sample_rows": 5593,
+      "modeled_units": 359434,
+      "partial": false
+    },
+    {
+      "month": "2023-11",
+      "sample_rows": 6510,
+      "modeled_units": 358326,
+      "partial": false
+    },
+    {
+      "month": "2023-12",
+      "sample_rows": 5999,
+      "modeled_units": 364767,
+      "partial": false
+    },
+    {
+      "month": "2024-01",
+      "sample_rows": 6102,
+      "modeled_units": 357220,
+      "partial": false
+    },
+    {
+      "month": "2024-02",
+      "sample_rows": 6581,
+      "modeled_units": 362663,
+      "partial": false
+    },
+    {
+      "month": "2024-03",
+      "sample_rows": 5525,
+      "modeled_units": 357581,
+      "partial": false
+    },
+    {
+      "month": "2024-04",
+      "sample_rows": 6406,
+      "modeled_units": 360606,
+      "partial": false
+    },
+    {
+      "month": "2024-05",
+      "sample_rows": 6473,
+      "modeled_units": 358962,
+      "partial": false
+    },
+    {
+      "month": "2024-06",
+      "sample_rows": 5684,
+      "modeled_units": 359376,
+      "partial": false
+    },
+    {
+      "month": "2024-07",
+      "sample_rows": 6283,
+      "modeled_units": 353206,
+      "partial": false
+    },
+    {
+      "month": "2024-08",
+      "sample_rows": 6270,
+      "modeled_units": 355954,
+      "partial": false
+    },
+    {
+      "month": "2024-09",
+      "sample_rows": 5667,
+      "modeled_units": 353668,
+      "partial": false
+    },
+    {
+      "month": "2024-10",
+      "sample_rows": 5599,
+      "modeled_units": 356976,
+      "partial": false
+    },
+    {
+      "month": "2024-11",
+      "sample_rows": 5991,
+      "modeled_units": 362447,
+      "partial": false
+    },
+    {
+      "month": "2024-12",
+      "sample_rows": 5480,
+      "modeled_units": 362040,
+      "partial": false
+    },
+    {
+      "month": "2025-01",
+      "sample_rows": 6562,
+      "modeled_units": 364065,
+      "partial": false
+    },
+    {
+      "month": "2025-02",
+      "sample_rows": 6379,
+      "modeled_units": 362427,
+      "partial": false
+    },
+    {
+      "month": "2025-03",
+      "sample_rows": 5763,
+      "modeled_units": 362851,
+      "partial": false
+    },
+    {
+      "month": "2025-04",
+      "sample_rows": 6902,
+      "modeled_units": 358943,
+      "partial": false
+    },
+    {
+      "month": "2025-05",
+      "sample_rows": 6664,
+      "modeled_units": 359586,
+      "partial": false
+    },
+    {
+      "month": "2025-06",
+      "sample_rows": 6016,
+      "modeled_units": 360832,
+      "partial": false
+    },
+    {
+      "month": "2025-07",
+      "sample_rows": 5789,
+      "modeled_units": 356027,
+      "partial": false
+    },
+    {
+      "month": "2025-08",
+      "sample_rows": 6084,
+      "modeled_units": 364792,
+      "partial": false
+    },
+    {
+      "month": "2025-09",
+      "sample_rows": 5937,
+      "modeled_units": 360153,
+      "partial": false
+    },
+    {
+      "month": "2025-10",
+      "sample_rows": 6839,
+      "modeled_units": 361692,
+      "partial": false
+    },
+    {
+      "month": "2025-11",
+      "sample_rows": 6552,
+      "modeled_units": 358929,
+      "partial": false
+    },
+    {
+      "month": "2025-12",
+      "sample_rows": 6517,
+      "modeled_units": 359808,
+      "partial": false
+    },
+    {
+      "month": "2026-01",
+      "sample_rows": 6633,
+      "modeled_units": 362525,
+      "partial": false
+    },
+    {
+      "month": "2026-02",
+      "sample_rows": 6542,
+      "modeled_units": 360241,
+      "partial": false
+    },
+    {
+      "month": "2026-03",
+      "sample_rows": 6723,
+      "modeled_units": 357908,
+      "partial": false
+    },
+    {
+      "month": "2026-04",
+      "sample_rows": 5484,
+      "modeled_units": 359020,
+      "partial": false
+    },
+    {
+      "month": "2026-05",
+      "sample_rows": 5590,
+      "modeled_units": 357097,
+      "partial": false
+    },
+    {
+      "month": "2026-06",
+      "sample_rows": 5479,
+      "modeled_units": 357484,
+      "partial": false
+    },
+    {
+      "month": "2026-07",
+      "sample_rows": 6075,
+      "modeled_units": 360391,
+      "partial": false
+    },
+    {
+      "month": "2026-08",
+      "sample_rows": 6552,
+      "modeled_units": 360978,
+      "partial": false
+    },
+    {
+      "month": "2026-09",
+      "sample_rows": 6032,
+      "modeled_units": 358115,
+      "partial": false
+    },
+    {
+      "month": "2026-10",
+      "sample_rows": 3415,
+      "modeled_units": 222137,
+      "partial": true
+    }
+  ],
+  "calibration_levels_count_product_months": {
+    "SYNTHETIC_NEUTRAL_NO_PRODUCT_EVIDENCE": 5400,
+    "DOCUMENTED_CATEGORY_PROXY": 384,
+    "CARRY_FORWARD_CATEGORY_PROXY_SYNTHETIC": 44
+  },
+  "outputs": [
+    "products_catalog.csv",
+    "pharma_retail_sales.csv",
+    "pharma_monthly_sales.csv",
+    "calibration_parameters.csv",
+    "data_quality_report.csv",
+    "calibration_overrides_template.csv",
+    "generation_manifest.json"
+  ]
+}

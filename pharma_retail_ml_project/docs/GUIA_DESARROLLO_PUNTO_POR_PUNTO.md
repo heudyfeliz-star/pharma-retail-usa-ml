@@ -256,16 +256,21 @@ Deben excluirse `.venv/`, `__pycache__/`, `.env`, `data/raw/` y `data/processed/
 3. Desde la raíz del proyecto:
 
 ```bash
-git init
-git add .
-git status
-git commit -m "Initial commit: synthetic pharma ETL and EDA"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/pharma-retail-usa-ml.git
-git push -u origin main
-```
 
-Sustituye `TU_USUARIO` por tu usuario real. Autentícate mediante Git Credential Manager o SSH; nunca incrustes un token en el código o en el repositorio.
+
+git remote remove origin
+git remote add origin https://github.com/heudyfeliz-star/pharma-retail-usa-ml.git
+git remote -v
+git push -u origin main
+
+### git init
+### git add .
+### git status
+### git commit -m "Initial commit: synthetic pharma ETL and EDA"
+### git branch -M main
+### git remote add origin https://github.com/heudyfeliz-star/pharma-retail-usa-ml.git
+### git push -u origin main
+```
 
 ### 6.3 Actualizar cambios
 
